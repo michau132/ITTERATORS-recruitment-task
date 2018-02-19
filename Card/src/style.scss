@@ -2,10 +2,6 @@
 @import './_variables.scss';
 @import './_global-class.scss';
 @import './_header.scss';
-@import './_logo.scss';
-
-
-
 
 
 .box__content {}
@@ -246,25 +242,20 @@
 
 @keyframes shaking {
   10% {transform: translateY(-8px); transform-origin: center}
-  15% {transform: rotate(15deg) translateY(-8px); transform-origin: bottom}
-  25% {transform: rotate(-15deg) translateY(-8px); transform-origin: bottom}
-  35% {transform: rotate(15deg) translateY(-8px); transform-origin: bottom}
+  15% {transform: rotate(8deg) translateY(-8px); transform-origin: bottom}
+  20% {transform: rotate(-8deg) translateY(-8px); transform-origin: bottom}
+  25% {transform: rotate(8deg) translateY(-8px); transform-origin: bottom}
+  30% {transform: rotate(-8deg) translateY(-8px); transform-origin: bottom}
 }
 .box__content__row__col-right__advisory__box__icon-ring {
-  transition: 1s all;
-  position: relative;
   background-color: transparent;
+  animation-name: makingCircle;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
-.box__content__row__col-right__advisory__box__icon-ring:hover:after {
-    content: '';
-    position: absolute;
-    top: -5%;
-    left: -5%;
-    bottom: -5%;
-    right: -5%;
-    border-radius: 50%;
-    background-color: rgba(#E8570C, 0.2);
-
+@keyframes makingCircle {
+  50% { transform-origin: right;
+    transform: rotate(360deg) translateX(50%)}
 }
 .box__content__row__col-right__advisory__link {
   text-decoration: none;
@@ -274,28 +265,36 @@
   background-color: red;
   padding: 15px 30px;
   position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 10px;
+  border: 3px solid transparent;
 
   &:hover {
     color: #fce38a;
     transition: 0.5s all;
+    border: 3px solid #fce38a;
+    animation-name: animBorder;
+    animation-duration: 2s;
 
     &:before {
       content: '';
       height: 2px;
-      width: 100%;
+      width: 80%;
       background-color: #fce38a;
       position: absolute;
       top: 35px;
-      left: 0;
-      animation-name: slideToLeft;
-      animation-duration: 0.5s;
+      left: 30px;
+      animation-name: slideToRight;
+      animation-duration: 1s;
     }
   }
 }
-@keyframes slideToLeft {
-  0% {transform: translateY(-150px)};
-100% {transform: translateY(0)};
+@keyframes slideToRight {
+  0% {width: 0};
+100% {width: 80%};
 }
+
 .box__content__row__col-right__advisory__para {
   text-align: center;
 }

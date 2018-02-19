@@ -13,6 +13,7 @@
   list-style: none;
   display: flex;
 }
+
 .main-header__main-nav__links__link {
   display: inline-block;
   text-decoration: none;
@@ -36,6 +37,7 @@
       background-color: #FF0000;
       transform: skew(-30deg);
       transition: 2s all;
+      z-index: 5;
     }
 
     &:before {
@@ -43,9 +45,26 @@
       position: absolute;
       left: -5px;
       bottom: 0;
-      width: 100px;
+      width: 100%;
       height: 3px;
       background-color: #FF0000;
+      z-index: 5;
     }
   }
+}
+.link-overlay {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: skew(-30deg);
+  opacity: 0;
+  transition: 1s all;
+}
+
+.main-header__main-nav__links__link:hover .link-overlay {
+  opacity: 1;
 }
