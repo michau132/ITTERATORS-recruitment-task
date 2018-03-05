@@ -5,66 +5,123 @@
   justify-content: space-between;
   align-items: center;
 }
-.main-header__main-nav__logo {}
-.main-header__main-nav__logo__img {
+.main-nav__logo {}
+.logo__img {
   display: inline-block;
 }
-.main-header__main-nav__links {
+.main-nav__links {
   list-style: none;
   display: flex;
 }
 
-.main-header__main-nav__links__link {
+.main-nav__link {
   display: inline-block;
   text-decoration: none;
   color: #4d394b;
   padding: 5px 20px;
   transition: 0.5s all;
   position: relative;
+  z-index: 14;
 
   &:hover {
     color: #E8570C;
     word-spacing: 2px;
     letter-spacing: 1px;
+    z-index: 14;
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 5%;
-      height: 120%;
-      background-color: #FF0000;
-      transform: skew(-30deg);
-      transition: 2s all;
-      z-index: 5;
-    }
-
+    &:after,
     &:before {
       content: '';
       position: absolute;
+      background-color: #FF0000;
+      z-index: 5;
+    }
+    &:after {
+      left: 0;
+      bottom: 0;
+      width: 5%;
+      height: 100%;
+      transform: skew(-30deg);
+      animation-name: showingLines1;
+      animation-duration: 1s;
+    }
+
+    &:before {
       left: -5px;
       bottom: 0;
       width: 100%;
       height: 3px;
-      background-color: #FF0000;
-      z-index: 5;
+      animation-name: showingLines2;
+      animation-duration: 1s;
     }
   }
 }
-.link-overlay {
+
+.main-nav__link--overlay,
+.main-nav__link--animation{
   position: absolute;
   top: 0;
   left: 2px;
-  background-color: #000;
   width: 100%;
   height: 100%;
-  z-index: -1;
   transform: skew(-30deg);
   opacity: 0;
-  transition: 1s all;
 }
-
-.main-header__main-nav__links__link:hover .link-overlay {
+.main-nav__link--overlay {
+  z-index: -1;
+  background-color: #000;
+}
+.main-nav__link--animation {
+  &:after,
+  &:before{
+    content: '';
+    position: absolute;
+    background-color: #FF0000;
+    z-index: 5;
+  }
+  &:after {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+  }
+  &:before {
+    right: -2px;
+    bottom: 0;
+    width: 5px;
+    transform-origin: bottom;
+    height: 100%;
+  }
+}
+.main-nav__link:hover > .main-nav__link--overlay {
   opacity: 1;
+  animation-name: linkOverlay;
+  animation-duration: 1s;
+}
+.main-nav__link:hover .main-nav__link--animation {
+  opacity: 1;
+  animation-name: linkAnim;
+  animation-duration: 1.5s;
+  animation-direction: reverse;
+}
+@keyframes showingLines1 {
+  0% {height: 0; }
+  100% {height: 100%}
+}
+@keyframes showingLines2 {
+  0% {width: 0}
+  50% {width: 50%}
+  100% {width: 100%}
+}
+@keyframes linkOverlay {
+  0% {height: 0; }
+  20% {height: 50%; transform: skew(-30deg);}
+  100% {height: 100%; transform: skew(-30deg);}
+}
+@keyframes linkAnim {
+  0% {height: 100%; width: 100%; left: 5px}
+
+  50% {height: 0;  width: 50%; left: 5px; transition: width 0.2s ease-in}
+
+  100% {height: 0;  width: 0;}
 }

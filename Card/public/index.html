@@ -11,87 +11,92 @@
     <title>Card</title>
 </head>
 <body>
-    <header class="main-header">
-        <div class="container">
-            <nav class="main-header__main-nav">
-                <div class="main-header__main-nav__logo">
-                    <a href="/" class="main-header__main-nav__logo__img"><img src="http://via.placeholder.com/80x40" alt="" ></a>
-                </div>
-                <ul class="main-header__main-nav__links">
-                    <li>
-                        <a href="#" class="main-header__main-nav__links__link">
-                            About us
-                            <span class="link-overlay"></span>
-                        </a>
-
-                    </li>
-                    <li>
-                        <a href="#" class="main-header__main-nav__links__link">
-                            Work
-                            <span class="link-overlay"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="main-header__main-nav__links__link">
-                            Sign In
-                            <span class="link-overlay"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="main-header__main-nav__links__link">
-                            Contact
-                            <span class="link-overlay"></span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section class="box">
-        <div class="box__content">
+    <div class="wrapper">
+        <header class="main-header">
             <div class="container">
-                <div class="box__content__row">
-                    <figure class="box__content__row__col-left">
-                        <figcaption class="box__content__row__col-left__description">Check this out</figcaption>
-                        <i class="fas fa-angle-double-down"></i>
-                        <div class="box__content__row__col-left__box">
-                            <h3 class="box__content__row__col-left__box__title">Lorem ipsum dolor.</h3>
-                            <img src="./img/laptop.jpg" alt="" class="box__content__row__col-left__box__img">
-                        </div>
-                    </figure>
-                    <div class="box__content__row__col-right">
-                        <header class="box__content__row__col-right__header">
-                            <div class="box__content__row__col-right__header__logo">
-                                <img src="./img/logo.jpg" alt="" class="box__content__row__col-right__header__logo__img">
-                                <span class="logo-overlay"></span>
+                <nav class="main-header__main-nav">
+                    <div class="main-nav__logo">
+                        <a href="/" class="logo__img"><img src="http://via.placeholder.com/80x40" alt="" ></a>
+                    </div>
+                    <ul class="main-nav__links">
+                        <li>
+                            <a href="#" class="main-nav__link">
+                                About us
+                                <span class="main-nav__link--overlay"></span>
+                                <span class="main-nav__link--animation"></span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#" class="main-nav__link">
+                                Work
+                                <span class="main-nav__link--overlay"></span>
+                                <span class="main-nav__link--animation"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="main-nav__link">
+                                Sign In
+                                <span class="main-nav__link--overlay"></span>
+                                <span class="main-nav__link--animation"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="main-nav__link">
+                                Contact
+                                <span class="main-nav__link--overlay"></span>
+                                <span class="main-nav__link--animation"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="box">
+            <div class="box__content">
+                <div class="container">
+                    <div class="content__row">
+                        <figure class="row__col-left">
+                            <figcaption class="col-left__description">Check this out</figcaption>
+                            <i class="col-left__fas fas fa-angle-double-down"></i>
+                            <div class="col-left__package">
+                                <h3 class="package__title">Lorem ipsum dolor.</h3>
+                                <img src="./img/laptop.jpg" alt="" class="package__img">
                             </div>
-                            <div class="box__content__row__col-right__header__text">
-                                <h1 class="box__content__row__col-right__header__text__title">Lorem</h1>
-                                <p class="box__content__row__col-right__header__text__para">Lorem ipsum dolor sit amet.</p>
+                        </figure>
+                        <div class="row__col-right">
+                            <header class="col-right__header">
+                                <div class="header__logo">
+                                    <img src="./img/logo.jpg" alt="" class="header__img">
+                                    <span class="header__logo--overlay"></span>
+                                </div>
+                                <div class="header__text">
+                                    <h1 class="header__title">Lorem</h1>
+                                    <p class="header__para">Lorem ipsum dolor sit amet.</p>
+                                </div>
+                            </header>
+                            <div class="col-right__quote">
+                                <h3 class="quote__title">"Don't design for brands. Design for people interacting with brands"</h3>
+                                <p class="quote__para">Donald, President of <span>United States</span></p>
                             </div>
-                        </header>
-                        <div class="box__content__row__col-right__quote">
-                            <h3 class="box__content__row__col-right__quote__title">"Don't design for brands. Design for people interacting with brands"</h3>
-                            <p class="box__content__row__col-right__quote__para">Donald, President of <span>United States</span></p>
-                        </div>
-                        <ul class="box__content__row__col-right__advantages">
-                            <li class="box__content__row__col-right__advantages__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos ipsa perspiciatis qui quos recusandae tempora.</li>
-                            <li class="box__content__row__col-right__advantages__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cupiditate dolore nisi repellendus similique voluptatum!</li>
-                            <li class="box__content__row__col-right__advantages__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio doloremque fugit provident quasi repellat voluptates?</li>
-                        </ul>
-                        <div class="box__content__row__col-right__advisory">
-                            <div class="box__content__row__col-right__advisory__box">
-                                <a href="#" class="box__content__row__col-right__advisory__box__icon-ring"><i class="fas fa-life-ring"></i></a>
-                                <a href="#" class="box__content__row__col-right__advisory__box__icon-git"><i class="fab fa-github"></i></a>
+                            <ul class="col-right__advantages">
+                                <li class="advantages__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos ipsa perspiciatis qui quos recusandae tempora.</li>
+                                <li class="advantages__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda cupiditate dolore nisi repellendus similique voluptatum!</li>
+                                <li class="advantages__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio doloremque fugit provident quasi repellat voluptates?</li>
+                            </ul>
+                            <div class="col-right__advisory">
+                                <div class="advisory__box">
+                                    <a href="#" class="advisory__icon-ring"><i class="fas fa-life-ring"></i></a>
+                                    <a href="#" class="advisory__icon-git"><i class="fab fa-github"></i></a>
+                                </div>
+                                <a class="advisory__link" href="mailto:michal1324@hotmail.com">If you want to check me, mail me!</a>
                             </div>
-                            <a class="box__content__row__col-right__advisory__link" href="mailto:michal1324@hotmail.com">If you want to check me, mail me!</a>
-                            <p class="box__content__row__col-right__advisory__para">It won't cost you. Only your time!</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
 </body>
 </html>
