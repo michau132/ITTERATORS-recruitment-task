@@ -33,7 +33,7 @@
     &:before {
       content: '';
       position: absolute;
-      background-color: #FF0000;
+      background: $navBorderColor;
       z-index: 5;
     }
     &:after {
@@ -69,14 +69,14 @@
 }
 .main-nav__link--overlay {
   z-index: -1;
-  background-color: #000;
+  background: $btnColorHover;
 }
 .main-nav__link--animation {
   &:after,
   &:before{
     content: '';
     position: absolute;
-    background-color: #FF0000;
+    background: $navBorderColor;
     z-index: 5;
   }
   &:after {

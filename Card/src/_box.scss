@@ -279,10 +279,10 @@
 }
 .advisory__link {
   text-decoration: none;
-  color: $gradientColor;
+  color: #fff;
   display: inline-block;
   text-align: center;
-  background-color: red;
+  background: $btnColor;
   padding: 15px 30px;
   position: relative;
   left: 50%;
@@ -291,17 +291,15 @@
   margin-bottom: 2rem;
 
   &:hover {
-    color: #fce38a;
     transition: 0.5s all;
-    outline: 3px solid #fce38a;
-    animation-name: animBorder;
-    animation-duration: 2s;
+    outline: 3px solid $btnColorHover;
+    background: $btnColorHover;
 
     &:before {
       content: '';
-      height: 2px;
+      height: 5px;
       width: 80%;
-      background-color: #fce38a;
+      background: #fff;
       position: absolute;
       top: 35px;
       left: 30px;
